@@ -1,7 +1,8 @@
-resource "aws_s3_bucket" "demo_bucket" {
-  bucket = "project12-demo-bucket-9878"
+terraform {
+  required_version = ">= 1.0"
+}
 
-  tags = {
-    Name = "Project12Bucket"
-  }
+resource "local_file" "example" {
+  filename = "hello.txt"
+  content  = "Terraform CI Pipeline Test"
 }
